@@ -1,0 +1,14 @@
+html{
+	background: linear-gradient(red, DarkOrange);
+}
+
+.navbar {
+	background: orange; 
+	height: 80px;
+	position: sticky;
+	top: 0;
+}
+
+blockquote {
+  margin-left: 5;
+}
