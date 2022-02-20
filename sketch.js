@@ -1,4 +1,4 @@
-let scl = 7;
+let scl = 5;
 
 let sigma = 10;
 let rho = 28;
@@ -14,8 +14,8 @@ let px = [];
 let py = [];
 let pz = [];
 
-let amount = 1;
-let desired = 1;
+let amount = 100;
+let desired = 100;
 
 
 function setup() {
@@ -35,7 +35,6 @@ function setup() {
     pz.push(z[z.length - 1]);
   }
   
-  length = createP('')
   
 
   
@@ -83,8 +82,6 @@ function draw() {
     pz.push(z[z.length - 1]);
     amount++;
   }
-  
-  length.html(amount);
   
   
   
