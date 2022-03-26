@@ -32,6 +32,7 @@ nav {
 }
 
 .navbarContent{
+	margin: 25px;
 	display: flex;
 	justify-content: space-around;
 	font-size: 17px;
@@ -39,11 +40,6 @@ nav {
 }
 
 .navbarContent li{
-	list-style: none;
-	text-decoration: none;
-}
-
-.navbarContent li.active{
 	list-style: none;
 	text-decoration: none;
 }
