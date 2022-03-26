@@ -22,7 +22,7 @@ body{
 	letter-spacing: 1px
 }
 
-.nav {
+nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -35,12 +35,12 @@ body{
 	display: flex;
 	justify-content: space-around;
 	font-size: 17px;
-	text-decoration-line: none;
 	width: 30%;
 }
 
 .navbarContent li{
 	list-style: none;
+	text-decoration-line: none;
 }
 
 blockquote {
