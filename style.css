@@ -9,7 +9,7 @@ body{
 .bodyContent{
 	color: white;
 	margin: 50px;
-
+	width: 40%;
 	font-size: 15px;
 
 }
@@ -48,7 +48,5 @@ nav {
 	text-decoration: none;
 }
 
-blockquote {
-  margin-left: 5;
-}
+
 
