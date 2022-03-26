@@ -65,7 +65,7 @@ function draw() {
     z[i] += dz;
     
     let variableAmount = map(y[i],-1.76,1.76,30,255)
-    stroke(255, 127, 80, variableAmount)
+    stroke(255, variableAmount)
     line(px[i] * scl,pz[i] * scl,x[i] * scl,z[i] * scl)
       
   }
