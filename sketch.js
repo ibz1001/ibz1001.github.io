@@ -27,7 +27,6 @@ let desired = 1000
 
 function setup() {
   createCanvas(800, 800);
-  background(0);
   
   for (let i  = 0; i < amount; i++){
     x.push(random(-0.01,0.01))
@@ -42,7 +41,7 @@ function setup() {
 
 function draw() {
   
-  background(0,20)
+  clear()
   translate(width / 2, height/2 - 50)
   
   for (let i = 0; i < amount; i++){
