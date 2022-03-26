@@ -21,8 +21,8 @@ let px = [];
 let py = [];
 let pz = [];
 
-let amount = 0
-const desired = 1000
+let amount = 100
+let desired = 1000
 
 let canvas;
 function setup() {
