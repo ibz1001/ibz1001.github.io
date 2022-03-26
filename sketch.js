@@ -26,7 +26,7 @@ const desired = 1000
 
 let canvas;
 function setup() {
-  canvas = createCanvas(800, 800);
+  canvas = createCanvas(windowWidth, windowHeight);
   canvas.position(0,0)
   canvas.style("z-index","-1")
   
@@ -41,10 +41,14 @@ function setup() {
   }
 }
 
+function windowResized(){
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function draw() {
   
   clear()
-  translate(width / 2, height/2 - 50)
+  translate(width / 2, height/2)
   
   for (let i = 0; i < amount; i++){
     //calculate
