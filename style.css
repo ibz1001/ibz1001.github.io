@@ -40,7 +40,7 @@ nav {
 
 .navbarContent li{
 	list-style: none;
-	text-decoration-line: none;
+	text-decoration-line: none!important;
 }
 
 blockquote {
