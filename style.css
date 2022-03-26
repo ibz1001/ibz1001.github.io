@@ -6,6 +6,7 @@ body{
 
 }
 
+
 .bodyContent{
 	color: white;
 	margin: 50px;
@@ -15,9 +16,8 @@ body{
 }
 
 .pageTitle{
-
+	margin: 25;
 	text-transform: uppercase;
-
 	font-size: 20px;
 	letter-spacing: 1px
 }
@@ -32,7 +32,6 @@ nav {
 }
 
 .navbarContent{
-	margin: 25px;
 	display: flex;
 	justify-content: space-around;
 	font-size: 17px;
