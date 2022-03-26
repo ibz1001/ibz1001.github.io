@@ -24,7 +24,7 @@ body{
 
 .nav {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	background: rgb(255, 127, 80); 
 	position: sticky;
