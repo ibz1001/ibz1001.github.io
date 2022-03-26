@@ -1,17 +1,17 @@
 let scl = 200
 
 //constants for the formulae
-let a = 0.95;
-let b = 0.7;
-let c = 0.65;
-let d = 3.5;
-let e = 0.25;
-let f = 0.1;
+const a = 0.95;
+const b = 0.7;
+const c = 0.65;
+const d = 3.5;
+const e = 0.25;
+const f = 0.1;
 
 
 
 //time variable
-let dt = 0.05;
+const dt = 0.05;
 
 let x = [];
 let y = [];
@@ -21,12 +21,14 @@ let px = [];
 let py = [];
 let pz = [];
 
-let amount = 1000
-let desired = 1000
+let amount = 0
+const desired = 1000
 
-
+let canvas;
 function setup() {
-  createCanvas(800, 800);
+  canvas = createCanvas(800, 800);
+  canvas.position(0,0)
+  canvas.style("z-index","-1")
   
   for (let i  = 0; i < amount; i++){
     x.push(random(-0.01,0.01))
