@@ -1,4 +1,4 @@
-let scl = 200
+let scl = 155
 
 //constants for the formulae
 const a = 0.95;
@@ -21,8 +21,8 @@ let px = [];
 let py = [];
 let pz = [];
 
-let amount = 1000
-let desired = 1000
+let amount = 100
+let desired = 100
 
 let canvas;
 function setup() {
@@ -65,7 +65,7 @@ function draw() {
     z[i] += dz;
     
     let variableAmount = map(y[i],-1.76,1.76,30,255)
-    stroke(variableAmount, 0, 0,100)
+    stroke(255, 127, 80, variableAmount)
     line(px[i] * scl,pz[i] * scl,x[i] * scl,z[i] * scl)
       
   }
