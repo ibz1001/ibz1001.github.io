@@ -1,4 +1,4 @@
-let scl = 155
+let scl = 250
 
 //constants for the formulae
 const a = 0.95;
@@ -11,7 +11,7 @@ const f = 0.1;
 
 
 //time variable
-const dt = 0.05;
+const dt = 0.01;
 
 let x = [];
 let y = [];
@@ -21,8 +21,8 @@ let px = [];
 let py = [];
 let pz = [];
 
-let amount = 100
-let desired = 100
+let amount = 500
+let desired = 500
 
 let canvas;
 function setup() {
@@ -48,7 +48,7 @@ function windowResized(){
 function draw() {
   
   clear()
-  translate(width / 2, height/2)
+  translate(width / 2, height/4)
   
   for (let i = 0; i < amount; i++){
     //calculate
