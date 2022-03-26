@@ -22,7 +22,7 @@ body{
 	letter-spacing: 1px
 }
 
-nav {
+.nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
