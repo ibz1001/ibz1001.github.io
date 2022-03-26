@@ -1,56 +1,56 @@
-let scl = 5;
+let scl = 200
 
-let sigma = 10;
-let rho = 28;
-let beta = 8.0 / 3.0;
+//constants for the formulae
+let a = 0.95;
+let b = 0.7;
+let c = 0.65;
+let d = 3.5;
+let e = 0.25;
+let f = 0.1;
 
-let dt = 0.01;
+
+
+//time variable
+let dt = 0.05;
 
 let x = [];
 let y = [];
 let z = [];
-
+//position on the last frame
 let px = [];
 let py = [];
 let pz = [];
 
-let amount = 100;
-let desired = 100;
+let amount = 1000
+let desired = 1000
 
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(800, 800);
   background(0);
   
-
-  
-  
-  for (let i = 0; i < amount + 1; i++){
-    x.push(random(-0.01,0.01));
-    y.push(random(-0.01,0.01));
-    z.push(random(-0.01,0.01));
+  for (let i  = 0; i < amount; i++){
+    x.push(random(-0.01,0.01))
+    y.push(random(-0.01,0.01))
+    z.push(random(-0.01,0.01))
     
     px.push(x[x.length - 1]);
     py.push(y[y.length - 1]);
     pz.push(z[z.length - 1]);
   }
-  
-  
-
-  
 }
 
 function draw() {
-
-
   
   background(0,20)
-  stroke(255, 0, 0, 100)
-  for (let i = 0; i < amount;i++){
-    var dx = (sigma * (y[i] - x[i])) * dt;
-    var dy = (x[i] * (rho - z[i]) - y[i]) * dt;
-    var dz = (x[i] * y[i] - beta * z[i]) * dt; 
-    
+  translate(width / 2, height/2 - 50)
+  
+  for (let i = 0; i < amount; i++){
+    //calculate
+    var dx = dt * ((z[i] - b) * x[i] - d*y[i]);
+    var dy = dt * (d*x[i]+(z[i]-b)*y[i]);
+    var dz = dt * (c + a*z[i] - (z[i]**3)/3 - (x[i]**2 + y[i]**2)*(1+e*z[i]) + f * z[i] * x[i]**3);
+    //add to current pos
     px[i] = x[i];
     py[i] = y[i];
     pz[i] = z[i];
@@ -59,31 +59,19 @@ function draw() {
     y[i] += dy;
     z[i] += dz;
     
-    translate(width / 4, height / 4)
-    line(px[i] * scl, py[i] * scl, x[i] * scl, y[i] * scl)
-    translate(width / 2,-height / 4)
-    line(py[i] * scl, pz[i] * scl, y[i] * scl, z[i] * scl)
-    translate(-(width / 4) * 3,(height / 4) * 3)
-    line(pz[i] * scl, px[i] * scl, z[i] * scl, x[i] * scl)
-    translate(-0, -((height / 4) * 3))
-    
+    let variableAmount = map(y[i],-1.76,1.76,30,255)
+    stroke(variableAmount, 0, 0,100)
+    line(px[i] * scl,pz[i] * scl,x[i] * scl,z[i] * scl)
+      
   }
-
-
-
-  
   if (amount < desired){
-    x.push(random(-0.01,0.01));
-    y.push(random(-0.01,0.01));
-    z.push(random(-0.01,0.01));
+    x.push(random(-0.01,0.01))
+    y.push(random(-0.01,0.01))
+    z.push(random(-0.01,0.01))
     
     px.push(x[x.length - 1]);
     py.push(y[y.length - 1]);
     pz.push(z[z.length - 1]);
-    amount++;
-  }
-  
-  
-  
+    amount++
+  } 
 }
-
