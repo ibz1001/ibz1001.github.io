@@ -28,6 +28,7 @@ nav {
 	align-items: center;
 	background: rgb(255, 127, 80); 
 	position: sticky;
+	list-style: none;
 	top: 0;
 }
 
@@ -37,4 +38,6 @@ nav {
 	font-size: 17px;
 	width: 30%;
 }
+
+
 
