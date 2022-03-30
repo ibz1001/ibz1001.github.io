@@ -16,9 +16,11 @@ let pz = [];
 
 let amount = 500;
 
-
+let canvas
 function setup() {
-  createCanvas(800, 800);
+  canvas = createCanvas(windowWidth, windowHeight);
+  canvas.position(0,0)
+  canvas.style("z-index","-1")
   
   for (let i = 0; i < amount + 1; i++){
     x.push(random(-0.01,0.01));
@@ -32,11 +34,15 @@ function setup() {
   stroke(255, 100)
 }
 
-function draw() {
-  clear()
+function windowResized(){
+    resizeCanvas(windowWidth, windowHeight);
+}
 
-  
+function draw() {
+
+  clear()
   translate(width / 2, height / 2)
+  
   for (let i = 0; i < amount;i++){
     var dx = (sigma * (y[i] - x[i])) * dt;
     var dy = (x[i] * (rho - z[i]) - y[i]) * dt;
