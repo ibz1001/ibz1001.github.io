@@ -22,7 +22,6 @@ let py = [];
 let pz = [];
 
 let amount = 500
-let desired = 500
 
 let canvas;
 function setup() {
@@ -69,14 +68,4 @@ function draw() {
     line(px[i] * scl,pz[i] * scl,x[i] * scl,z[i] * scl)
       
   }
-  if (amount < desired){
-    x.push(random(-0.01,0.01))
-    y.push(random(-0.01,0.01))
-    z.push(random(-0.01,0.01))
-    
-    px.push(x[x.length - 1]);
-    py.push(y[y.length - 1]);
-    pz.push(z[z.length - 1]);
-    amount++
-  } 
 }
